@@ -1,0 +1,18 @@
+
+--------------------
+sub-CHIVES1001
+--------------------
+WARNING! Too many json files in sub-CHIVES1001 ses-wave1 fmap
+WARNING! Too many nii.gz files in sub-CHIVES1001 ses-wave1 fmap
+WARNING! Too many json files in sub-CHIVES1001 ses-wave1 func
+WARNING! Too many nii.gz files in sub-CHIVES1001 ses-wave1 func
+
+--------------------
+sub-CHIVES1002
+--------------------
+FILE WARNING! sub-CHIVES1002 MISSING dir-pa json files in ses-wave1.
+FILE WARNING! sub-CHIVES1002 MISSING dir-pa nii.gz files in ses-wave1.
+FILE WARNING! sub-CHIVES1002 MISSING words_acq-1 json files in ses-wave1.
+FILE WARNING! sub-CHIVES1002 MISSING words_acq-1 nii.gz files in ses-wave1.
+FILE WARNING! sub-CHIVES1002 MISSING words_acq-2 json files in ses-wave1.
+FILE WARNING! sub-CHIVES1002 MISSING words_acq-2 nii.gz files in ses-wave1.

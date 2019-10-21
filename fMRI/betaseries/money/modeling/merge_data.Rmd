@@ -1,0 +1,124 @@
+---
+title: "Merge Data"
+author: "Dani Cosme"
+date: "`r Sys.Date()`"
+output:
+  html_document:
+    code_folding: hide
+    highlight: tango
+    theme: united
+    toc: true
+    toc_float: 
+      collapsed: TRUE
+      smooth_scroll: TRUE
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+# load packages
+```{r}
+library(tidyverse)
+```
+
+# load and tidy data
+* exclude CHIVES1038 betas > 29 and CHIVES1078 beta 60; they are not trials as the task was stopped early
+```{r}
+# load demographics data
+demographics = read.csv("../../../../self-report/CHIVES_demographics.csv", stringsAsFactors = FALSE) %>%
+  select(-Condition) %>%
+  rename("subjectID" = Participant,
+         "gender" = Gender,
+         "age" = Age) %>%
+  mutate(subjectID = gsub("CH", "CHIVES", subjectID))
+
+# load task data
+task = read.csv("../../../fx/multiconds/money/betaseries_image/events.csv", stringsAsFactors = FALSE) %>%
+  group_by(subjectID) %>%
+  mutate(trial = row_number(),
+         bid = ifelse(bid == "NULL", NA, bid),
+         bid = as.numeric(bid),
+         rt = ifelse(is.na(bid), NA, rt)) %>%
+  ungroup()
+
+# load parameter estimates
+file_dir = "../../../betaseries/money/parameterEstimates"
+file_pattern = "CHIVES1[0-9]{3}_parameterEstimates.txt"
+file_list = list.files(file_dir, pattern = file_pattern)
+
+betas_tmp = data.frame()
+
+for (file in file_list) {
+  tmp = tryCatch(read.table(file.path(file_dir,file), fill = TRUE) %>%
+                    rename("subjectID" = V1,
+                           "roi" = V3,
+                           "meanPE" = V4, 
+                           "sdPE" = V5) %>%
+                    extract(V2, "trial", "beta_([0-9]{4}).nii") %>%
+                    mutate(trial = as.integer(trial)), error = function(e) message(file))
+  
+  betas_tmp = rbind(betas_tmp, tmp)
+  rm(tmp)
+}
+
+betas = betas_tmp %>%
+  filter(!(subjectID == "CHIVES1038" & trial > 29) & !(subjectID == "CHIVES1078" & trial == 60)) %>%
+  mutate(subjectID = as.character(subjectID),
+         roi = as.character(roi),
+         roi = ifelse(roi %in% c(as.character(1:200)), paste0("Schaefer_", roi), roi))
+rm(betas_tmp)
+
+# load mean intensities
+file_pattern = "CHIVES1[0-9]{3}_meanIntensity.txt"
+file_list = list.files(file_dir, pattern = file_pattern)
+
+intensities_tmp = data.frame()
+
+for (file in file_list) {
+  tmp = tryCatch(read.table(file.path(file_dir,file), fill = TRUE) %>%
+                    rename("subjectID" = V1,
+                           "meanIntensity" = V3) %>%
+                    extract(V2, "trial", "beta_([0-9]{4}).nii") %>%
+                    mutate(trial = as.integer(trial)), error = function(e) message(file))
+  
+  intensities_tmp = rbind(intensities_tmp, tmp)
+  rm(tmp)
+}
+
+intensities = intensities_tmp %>%
+  mutate(subjectID = as.character(subjectID)) %>%
+  filter(!(subjectID == "CHIVES1038" & trial > 29) & !(subjectID == "CHIVES1078" & trial == 60))
+rm(intensities_tmp)
+```
+
+# merge data frames
+```{r}
+merged = betas %>%
+  left_join(., task, by = c("subjectID", "trial")) %>%
+  left_join(., intensities, by = c("subjectID", "trial")) %>%
+  left_join(., demographics, by = "subjectID")
+```
+
+# check n trials
+```{r}
+merged %>%
+  select(-c(roi, meanPE, sdPE)) %>%
+  unique() %>%
+  group_by(subjectID) %>%
+  summarize(n = n())
+```
+
+# write csv
+```{r}
+write.csv(merged, "wtp_data.csv", row.names = FALSE)
+```
+
+# compress file
+```{bash}
+zip wtp_data.zip wtp_data.csv
+rm wtp_data.csv
+```
+
+

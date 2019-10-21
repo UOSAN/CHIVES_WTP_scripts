@@ -1,0 +1,106 @@
+
+Script ran on 93 subject directories
+
+
+--------------------
+sub-CHIVES1001
+--------------------
+
+ EXISTS: sub-CHIVES1001 has 1 ses-wave directories. 
+
+
+ EXIST: sub-CHIVES1001 ses-wave1 has 3 total sequence directories. 
+
+
+ EXISTS: fmap folder for subject sub-CHIVES1001 
+
+
+ FIXING FILES: json 
+
+MOVED: sub-CHIVES1001_ses-wave1_dir-ap_run-01_epi.json to /projects/sanlab/shared/CHIVES/bids_data/tmp_dcm2bids/sub-CHIVES1001_ses-wave1
+RENAMED: /projects/sanlab/shared/CHIVES/bids_data/sub-CHIVES1001/ses-wave1/fmap/sub-CHIVES1001_ses-wave1_dir-ap_run-02_epi.json, dropped run from filename
+
+ FIXING FILES: nii.gz 
+
+MOVED: sub-CHIVES1001_ses-wave1_dir-ap_run-01_epi.nii.gz to /projects/sanlab/shared/CHIVES/bids_data/tmp_dcm2bids/sub-CHIVES1001_ses-wave1
+RENAMED: /projects/sanlab/shared/CHIVES/bids_data/sub-CHIVES1001/ses-wave1/fmap/sub-CHIVES1001_ses-wave1_dir-ap_run-02_epi.nii.gz, dropped run from filename
+
+ FIXING FILES: json 
+
+MOVED: sub-CHIVES1001_ses-wave1_dir-pa_run-01_epi.json to /projects/sanlab/shared/CHIVES/bids_data/tmp_dcm2bids/sub-CHIVES1001_ses-wave1
+RENAMED: /projects/sanlab/shared/CHIVES/bids_data/sub-CHIVES1001/ses-wave1/fmap/sub-CHIVES1001_ses-wave1_dir-pa_run-02_epi.json, dropped run from filename
+
+ FIXING FILES: nii.gz 
+
+MOVED: sub-CHIVES1001_ses-wave1_dir-pa_run-01_epi.nii.gz to /projects/sanlab/shared/CHIVES/bids_data/tmp_dcm2bids/sub-CHIVES1001_ses-wave1
+RENAMED: /projects/sanlab/shared/CHIVES/bids_data/sub-CHIVES1001/ses-wave1/fmap/sub-CHIVES1001_ses-wave1_dir-pa_run-02_epi.nii.gz, dropped run from filename
+
+ EXISTS: anat folder for subject sub-CHIVES1001 
+
+OK: sub-CHIVES1001 has correct number of T1w json files in ses-wave1.
+OK: sub-CHIVES1001 has correct number of T1w nii.gz files in ses-wave1.
+
+ EXISTS: func folder for subject sub-CHIVES1001 
+
+
+ FIXING FILES: json 
+
+MOVED: sub-CHIVES1001_ses-wave1_task-money_run-01_bold.json to /projects/sanlab/shared/CHIVES/bids_data/tmp_dcm2bids/sub-CHIVES1001_ses-wave1
+RENAMED: /projects/sanlab/shared/CHIVES/bids_data/sub-CHIVES1001/ses-wave1/func/sub-CHIVES1001_ses-wave1_task-money_run-02_bold.json, dropped run from filename
+
+ FIXING FILES: nii.gz 
+
+MOVED: sub-CHIVES1001_ses-wave1_task-money_run-01_bold.nii.gz to /projects/sanlab/shared/CHIVES/bids_data/tmp_dcm2bids/sub-CHIVES1001_ses-wave1
+RENAMED: /projects/sanlab/shared/CHIVES/bids_data/sub-CHIVES1001/ses-wave1/func/sub-CHIVES1001_ses-wave1_task-money_run-02_bold.nii.gz, dropped run from filename
+
+ FIXING FILES: json 
+
+MOVED: sub-CHIVES1001_ses-wave1_task-words_acq-1_run-01_bold.json to /projects/sanlab/shared/CHIVES/bids_data/tmp_dcm2bids/sub-CHIVES1001_ses-wave1
+RENAMED: /projects/sanlab/shared/CHIVES/bids_data/sub-CHIVES1001/ses-wave1/func/sub-CHIVES1001_ses-wave1_task-words_acq-1_run-02_bold.json, dropped run from filename
+
+ FIXING FILES: nii.gz 
+
+MOVED: sub-CHIVES1001_ses-wave1_task-words_acq-1_run-01_bold.nii.gz to /projects/sanlab/shared/CHIVES/bids_data/tmp_dcm2bids/sub-CHIVES1001_ses-wave1
+RENAMED: /projects/sanlab/shared/CHIVES/bids_data/sub-CHIVES1001/ses-wave1/func/sub-CHIVES1001_ses-wave1_task-words_acq-1_run-02_bold.nii.gz, dropped run from filename
+OK: sub-CHIVES1001 has correct number of words_acq-2 json files in ses-wave1.
+OK: sub-CHIVES1001 has correct number of words_acq-2 nii.gz files in ses-wave1.
+
+ FIXING FILES: json 
+
+MOVED: sub-CHIVES1001_ses-wave1_task-picture_acq-1_run-01_bold.json to /projects/sanlab/shared/CHIVES/bids_data/tmp_dcm2bids/sub-CHIVES1001_ses-wave1
+RENAMED: /projects/sanlab/shared/CHIVES/bids_data/sub-CHIVES1001/ses-wave1/func/sub-CHIVES1001_ses-wave1_task-picture_acq-1_run-02_bold.json, dropped run from filename
+
+ FIXING FILES: nii.gz 
+
+MOVED: sub-CHIVES1001_ses-wave1_task-picture_acq-1_run-01_bold.nii.gz to /projects/sanlab/shared/CHIVES/bids_data/tmp_dcm2bids/sub-CHIVES1001_ses-wave1
+RENAMED: /projects/sanlab/shared/CHIVES/bids_data/sub-CHIVES1001/ses-wave1/func/sub-CHIVES1001_ses-wave1_task-picture_acq-1_run-02_bold.nii.gz, dropped run from filename
+OK: sub-CHIVES1001 has correct number of picture_acq-2 json files in ses-wave1.
+OK: sub-CHIVES1001 has correct number of picture_acq-2 nii.gz files in ses-wave1.
+
+--------------------
+sub-CHIVES1002
+--------------------
+
+ EXISTS: sub-CHIVES1002 has 1 ses-wave directories. 
+
+
+ EXIST: sub-CHIVES1002 ses-wave1 has 3 total sequence directories. 
+
+
+ EXISTS: fmap folder for subject sub-CHIVES1002 
+
+OK: sub-CHIVES1002 has correct number of dir-ap json files in ses-wave1.
+OK: sub-CHIVES1002 has correct number of dir-ap nii.gz files in ses-wave1.
+
+ EXISTS: anat folder for subject sub-CHIVES1002 
+
+OK: sub-CHIVES1002 has correct number of T1w json files in ses-wave1.
+OK: sub-CHIVES1002 has correct number of T1w nii.gz files in ses-wave1.
+
+ EXISTS: func folder for subject sub-CHIVES1002 
+
+OK: sub-CHIVES1002 has correct number of money json files in ses-wave1.
+OK: sub-CHIVES1002 has correct number of money nii.gz files in ses-wave1.
+
+ FIXING FILES: json 
+
