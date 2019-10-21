@@ -1,0 +1,15 @@
+.DS_Store
+/**/logs_dcm2bids/*
+/**/logs_bidsQC/*
+/**/output/*
+*.log
+*_error.txt
+*_output.txt
+sMRI/output/*
+fMRI/ppc/output/*
+fMRI/mvpa/local/mvpa_output/*
+fMRI/masks/spm/sid_batches/*
+fMRI/masks/spm/mask_output/*
+fMRI/masks/shell/output/*
+dcm2bids/logs_dcm2bids/*
+dcm2bids/bidsQC/logs_bidsQC/*
