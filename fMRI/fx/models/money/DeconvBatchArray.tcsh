@@ -10,7 +10,7 @@ set sub = CHIVES1${SLURM_ARRAY_TASK_ID}
 
 module load afni
 
-cd /projects/sanlab/shared/CHIVES/CHIVES_scripts/behavioral/money/afni_timing_files/${sub}
+cd /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/${sub}
 
 1dMarry AllStimOns.1D AllBid.1D > AllCondsPmod.1D
 
@@ -28,11 +28,12 @@ cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/${sub}
 
 3dDeconvolve 	\
 	-input /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-${sub}/ses-wave1/func/s6_sub-${sub}_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii \
+	-mask /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-${sub}/ses-wave1/func/sub-${sub}_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz \
 	-polort A -jobs 10  \
-	-ortvec /projects/sanlab/shared/CHIVES/CHIVES_scripts/fMRI/fx/motion/auto-motion-fmriprep/rp_txt/rp_${sub}_1_money_1.txt demean 	\
+	-ortvec /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/fMRI/fx/motion/auto-motion-fmriprep/rp_txt/rp_${sub}_1_money_1.txt demean 	\
 	-num_stimts 2 \
-	-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_scripts/behavioral/money/afni_timing_files/${sub}/AllCondsPmod.1D 'BLOCK(4,1)' -stim_label 1 AllConds \
-	-stim_times_AM1 2 /projects/sanlab/shared/CHIVES/CHIVES_scripts/behavioral/money/afni_timing_files/${sub}/BidOnsDur.1D 'dmBLOCK(1)' -stim_label 2 BidsNMiss \
+	-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/${sub}/AllCondsPmod.1D 'BLOCK(4,1)' -stim_label 1 AllConds \
+	-stim_times_AM1 2 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/${sub}/BidOnsDur.1D 'dmBLOCK(1)' -stim_label 2 BidsNMiss \
 	-num_glt 2 \
 	-gltsym 'SYM: AllConds[0]' \
 	-glt_label 1 CondGtRest \
@@ -46,12 +47,13 @@ cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/${sub}
 
 3dDeconvolve 	\
 	-input /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-${sub}/ses-wave1/func/s6_sub-${sub}_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii \
+	-mask /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-${sub}/ses-wave1/func/sub-${sub}_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz \
 	-polort A -jobs 10  \
-	-ortvec /projects/sanlab/shared/CHIVES/CHIVES_scripts/fMRI/fx/motion/auto-motion-fmriprep/rp_txt/rp_${sub}_1_money_1.txt demean 	\
+	-ortvec /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/fMRI/fx/motion/auto-motion-fmriprep/rp_txt/rp_${sub}_1_money_1.txt demean 	\
 	-num_stimts 3 \
-	-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_scripts/behavioral/money/afni_timing_files/${sub}/HealthyPmod.1D 'BLOCK(4,1)' -stim_label 1 HealthyPmod \
-	-stim_times_AM2 2 /projects/sanlab/shared/CHIVES/CHIVES_scripts/behavioral/money/afni_timing_files/${sub}/UnhealthyPmod.1D 'BLOCK(4,1)' -stim_label 1 UnhealthyPmod \
-	-stim_times_AM1 3 /projects/sanlab/shared/CHIVES/CHIVES_scripts/behavioral/money/afni_timing_files/${sub}/BidOnsDur.1D 'dmBLOCK(1)' -stim_label 2 BidsNMiss \
+	-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/${sub}/HealthyPmod.1D 'BLOCK(4,1)' -stim_label 1 HealthyPmod \
+	-stim_times_AM2 2 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/${sub}/UnhealthyPmod.1D 'BLOCK(4,1)' -stim_label 1 UnhealthyPmod \
+	-stim_times_AM1 3 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/${sub}/BidOnsDur.1D 'dmBLOCK(1)' -stim_label 2 BidsNMiss \
 	-num_glt 6 \
 	-gltsym 'SYM: HealthyPmod[0]' \
 	-glt_label 1 HealthyGtRest \
@@ -73,12 +75,13 @@ cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/${sub}
 
 3dDeconvolve 	\
 	-input /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-${sub}/ses-wave1/func/s6_sub-${sub}_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii \
+	-mask /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-${sub}/ses-wave1/func/sub-${sub}_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz \
 	-polort A -jobs 10  \
-	-ortvec /projects/sanlab/shared/CHIVES/CHIVES_scripts/fMRI/fx/motion/auto-motion-fmriprep/rp_txt/rp_${sub}_1_money_1.txt demean 	\
+	-ortvec /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/fMRI/fx/motion/auto-motion-fmriprep/rp_txt/rp_${sub}_1_money_1.txt demean 	\
 	-num_stimts 3 \
-	-stim_times_AM1 1 /projects/sanlab/shared/CHIVES/CHIVES_scripts/behavioral/money/afni_timing_files/${sub}/HealthyOns.1D 'BLOCK(4,1)' -stim_label 1 Healthy \
-	-stim_times_AM1 2 /projects/sanlab/shared/CHIVES/CHIVES_scripts/behavioral/money/afni_timing_files/${sub}/UnhealthyOns.1D 'BLOCK(4,1)' -stim_label 1 Unhealthy \
-	-stim_times_AM1 3 /projects/sanlab/shared/CHIVES/CHIVES_scripts/behavioral/money/afni_timing_files/${sub}/BidOnsDur.1D 'dmBLOCK(1)' -stim_label 2 BidsNMiss \
+	-stim_times_AM1 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/${sub}/HealthyOns.1D 'BLOCK(4,1)' -stim_label 1 Healthy \
+	-stim_times_AM1 2 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/${sub}/UnhealthyOns.1D 'BLOCK(4,1)' -stim_label 1 Unhealthy \
+	-stim_times_AM1 3 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/${sub}/BidOnsDur.1D 'dmBLOCK(1)' -stim_label 2 BidsNMiss \
 	-num_glt 3 \
 	-gltsym 'SYM: Healthy' \
 	-glt_label 1 HealthyGtRest \
