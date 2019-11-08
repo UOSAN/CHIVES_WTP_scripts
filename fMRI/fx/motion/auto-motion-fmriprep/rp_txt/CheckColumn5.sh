@@ -4,5 +4,7 @@ test=`cat $s | awk '{sum+=$5} END{print sum}'`
 if [ $test -eq 0 ]; then
 echo $s
 cat $s | awk '{print $1,$2,$3,$4}' > FourColumn/${s}
+else
+Rscript ExtractMotion4Afni.R $s
 fi
 done
