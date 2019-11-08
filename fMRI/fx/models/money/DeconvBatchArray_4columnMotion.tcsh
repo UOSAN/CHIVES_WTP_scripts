@@ -32,7 +32,7 @@ cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/${sub}
 	-force_TR 2 \
 	-input /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-${sub}/ses-wave1/func/s6_sub-${sub}_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii \
 	-mask /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-${sub}/ses-wave1/func/sub-${sub}_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz \
-	-polort A -jobs 10  \
+	-polort A -jobs 20  \
 	-ortvec /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/fMRI/fx/motion/auto-motion-fmriprep/rp_txt/FourColumn/rp_${sub}_1_money_1.txt demean 	\
 	-num_stimts 2 \
 	-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/${sub}/AllCondsPmod.1D 'BLOCK(4,1)' -stim_label 1 AllConds \
@@ -52,7 +52,7 @@ cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/${sub}
 	-force_TR 2 \
 	-input /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-${sub}/ses-wave1/func/s6_sub-${sub}_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii \
 	-mask /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-${sub}/ses-wave1/func/sub-${sub}_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz \
-	-polort A -jobs 10  \
+	-polort A -jobs 20  \
 	-ortvec /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/fMRI/fx/motion/auto-motion-fmriprep/rp_txt/FourColumn/rp_${sub}_1_money_1.txt demean 	\
 	-num_stimts 3 \
 	-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/${sub}/HealthyPmod.1D 'BLOCK(4,1)' -stim_label 1 HealthyPmod \
@@ -81,7 +81,7 @@ cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/${sub}
 	-force_TR 2 \
 	-input /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-${sub}/ses-wave1/func/s6_sub-${sub}_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii \
 	-mask /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-${sub}/ses-wave1/func/sub-${sub}_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz \
-	-polort A -jobs 10  \
+	-polort A -jobs 20  \
 	-ortvec /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/fMRI/fx/motion/auto-motion-fmriprep/rp_txt/FourColumn/rp_${sub}_1_money_1.txt demean 	\
 	-num_stimts 3 \
 	-stim_times 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/${sub}/HealthyOns.1D 'BLOCK(4,1)' -stim_label 1 Healthy \
