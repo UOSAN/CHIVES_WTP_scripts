@@ -87,7 +87,6 @@ sub-CHIVES1078	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money
 sub-CHIVES1079	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1079/CHIVES1079_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1079/CHIVES1079_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Tstat]"	\
 sub-CHIVES1080	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1080/CHIVES1080_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1080/CHIVES1080_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Tstat]"	\
 sub-CHIVES1081	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1081/CHIVES1081_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1081/CHIVES1081_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Tstat]"	\
-sub-CHIVES1082	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1082/CHIVES1082_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1082/CHIVES1082_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Tstat]"	\
 sub-CHIVES1083	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1083/CHIVES1083_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1083/CHIVES1083_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Tstat]"	\
 sub-CHIVES1084	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1084/CHIVES1084_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1084/CHIVES1084_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Tstat]"	\
 sub-CHIVES1085	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1085/CHIVES1085_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1085/CHIVES1085_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Tstat]"	\
@@ -107,7 +106,7 @@ sub-CHIVES1102	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money
 sub-CHIVES1103	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1103/CHIVES1103_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1103/CHIVES1103_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Tstat]"	\
 sub-CHIVES1105	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1105/CHIVES1105_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1105/CHIVES1105_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Tstat]"	\
             -mask /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/code/MNI152_T1_2mm_brain_mask.nii  \
-            -covariates /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/code/covariates.txt
+            -covariates /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/fMRI/rx/money/covariates.txt
 
 
 exit
