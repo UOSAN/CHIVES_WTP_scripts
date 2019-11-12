@@ -1,7 +1,6 @@
 #!/bin/tcsh
 #SBATCH --time=10:00:00
 #SBATCH --nodes=1
-#SBATCH --ntasks-per-node=20
 #SBATCH --mem=124000
 #SBATCH --partition=ctn
 #SBATCH --account=sanlab
