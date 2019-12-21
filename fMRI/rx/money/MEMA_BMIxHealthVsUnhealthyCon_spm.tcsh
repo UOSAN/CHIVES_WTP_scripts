@@ -4,14 +4,16 @@
 #SBATCH --ntasks-per-node=20
 #SBATCH --mem=124000
 #SBATCH --partition=ctn
+#SBATCH --account=sanlab
+#SBATCH --output=MemaBmiX2CondNoPmod_spmfx.log
 module load afni
 
 # apply any data directories with variables
 cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/afni_rx
-3dMEMA -prefix BMIxHealthvsUnhealthy_MEMA                 \
+3dMEMA -prefix BMIxHealthvsUnhealthy_MEMA_spmfx                 \
   -cio -max_zeros 2 -missing_data 0                 \
   -model_outliers -jobs 20 -verb 1                \
-       -set Pmod                                        \
+       -set TwoCondNoPmod                                        \
           sub-CHIVES1001	/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/pmod/sub-CHIVES1001/con_0004.nii	/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/pmod/sub-CHIVES1001/spmT_0004.nii	\
 sub-CHIVES1002	/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/pmod/sub-CHIVES1002/con_0004.nii	/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/pmod/sub-CHIVES1002/spmT_0004.nii	\
 sub-CHIVES1003	/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/pmod/sub-CHIVES1003/con_0004.nii	/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/pmod/sub-CHIVES1003/spmT_0004.nii	\

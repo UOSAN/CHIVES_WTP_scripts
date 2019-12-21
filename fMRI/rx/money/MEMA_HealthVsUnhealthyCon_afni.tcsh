@@ -4,12 +4,12 @@
 #SBATCH --mem=124000
 #SBATCH --partition=ctn
 #SBATCH --account=sanlab
-#SBATCH --output=MemaBmiXHealthVsUnhealthCon_afnifx.log
+#SBATCH --output=MemaHealthVsUnhealthCon_afnifx.log
 module load afni
 
 # apply any data directories with variables
 cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/afni_rx
-3dMEMA -prefix BMIxHealthvsUnhealthy_MEMA_afnifx                 \
+3dMEMA -prefix HealthvsUnhealthy_MEMA_afnifx                 \
   -cio -max_zeros 2 -missing_data 0                 \
   -model_outliers -jobs 20 -verb 1                \
        -set CondsNoPmod                                        \
@@ -106,8 +106,7 @@ sub-CHIVES1100	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money
 sub-CHIVES1102	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1102/CHIVES1102_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1102/CHIVES1102_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
 sub-CHIVES1103	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1103/CHIVES1103_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1103/CHIVES1103_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
 sub-CHIVES1105	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1105/CHIVES1105_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1105/CHIVES1105_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
-            -mask /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/code/MNI152_T1_2mm_brain_mask.nii  \
-            -covariates /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/fMRI/rx/money/covariates.txt
+            -mask /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/code/MNI152_T1_2mm_brain_mask.nii  
 
 
 exit

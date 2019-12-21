@@ -4,16 +4,16 @@
 #SBATCH --mem=124000
 #SBATCH --partition=ctn
 #SBATCH --account=sanlab
-#SBATCH --output=MemaBmiXUnhealthPmod.log
+#SBATCH --output=MemaBmiXUnhealthPmod_afnifx.log
 
 module load afni
 
 # apply any data directories with variables
 cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/afni_rx
-3dMEMA -prefix BMIxUnhealthyPmod_MEMA                 \
+3dMEMA -prefix BMIxUnhealthyPmod_MEMA_afnifx                 \
   -cio -max_zeros 2 -missing_data 0                 \
   -model_outliers -jobs 20 -verb 1                \
-       -set Pmod                                        \
+       -set UnhealthyPmod                                        \
           sub-CHIVES1001	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1001/CHIVES1001_2CondPmod_stats_REML+tlrc.HEAD[23]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1001/CHIVES1001_2CondPmod_stats_REML+tlrc.HEAD[24]"	\
 sub-CHIVES1002	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1002/CHIVES1002_2CondPmod_stats_REML+tlrc.HEAD[23]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1002/CHIVES1002_2CondPmod_stats_REML+tlrc.HEAD[24]"	\
 sub-CHIVES1003	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1003/CHIVES1003_2CondPmod_stats_REML+tlrc.HEAD[23]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1003/CHIVES1003_2CondPmod_stats_REML+tlrc.HEAD[24]"	\
