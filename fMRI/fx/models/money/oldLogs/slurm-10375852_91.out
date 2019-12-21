@@ -1,0 +1,324 @@
+++ '-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1091/AllCondsPmod.1D' has 1 auxiliary values per time point
+++ '-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1091/AllCondsPmod.1D' will have 2 regressors
+++ '-stim_times_AM1 2 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1091/BidOnsDur.1D' has 1 auxiliary values per time point
+++ '-stim_times_AM1 2': basis function model 'dmBLOCK(1)' uses 1 parameters,
+    out of the 1 found in timing file '/projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1091/BidOnsDur.1D'
+++ 3dDeconvolve extending num_stimts from 2 to 7 due to -ortvec
+++ 3dDeconvolve: AFNI version=AFNI_18.2.04 (Jul  6 2018) [64-bit]
+++ Authored by: B. Douglas Ward, et al.
+++ current memory malloc-ated = 260,810 bytes (about 261 thousand [kilo])
+++ loading dataset /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1091/ses-wave1/func/s6_sub-CHIVES1091_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii
+++ current memory malloc-ated = 263,626 bytes (about 264 thousand [kilo])
+++ forcibly using TR=2.0000 seconds for -input dataset
+++ Skipping check for initial transients
+++ Imaging duration=698.0 s; Automatic polort=5
+++ -stim_times using TR=2 s for stimulus timing conversion
+++ -stim_times using TR=2 s for any -iresp output datasets
+++  [you can alter the -iresp TR via the -TR_times option]
+++ ** -stim_times NOTE ** guessing GLOBAL times if 1 time per line; LOCAL otherwise
+++ ** GUESSED ** -stim_times_AM2 1 using LOCAL times
+++ '-stim_times_AM2 1' average amplitude#1=0.336364
+++ ** GUESSED ** -stim_times_AM1 2 using LOCAL times
+------------------------------------------------------------
+GLT matrix from 'SYM: AllConds[0]':
+   0   0   0   0   0   0   1   0   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: AllConds[1]':
+   0   0   0   0   0   0   0   1   0   0   0   0   0   0 
+ 
+++ Number of time points: 349 (no censoring)
+ + Number of parameters:  14 [11 baseline ; 3 signal]
+++ total shared memory needed = 3,085,963,820 bytes (about 3.1 billion [giga])
+++ current memory malloc-ated = 1,391,292 bytes (about 1.4 million [mega])
+++ mmap() memory allocated: 3,085,963,820 bytes (about 3.1 billion [giga])
+++ Memory required for output bricks = 3,085,963,820 bytes (about 3.1 billion [giga])
+++ Wrote matrix values to file CHIVES1091_AllCondPmod_xmat.1D
+++ ========= Things you can do with the matrix file =========
+++ (a) Linear regression with ARMA(1,1) modeling of serial correlation:
+
+3dREMLfit -matrix CHIVES1091_AllCondPmod_xmat.1D -input /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1091/ses-wave1/func/s6_sub-CHIVES1091_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii \
+ -mask /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1091/ses-wave1/func/sub-CHIVES1091_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz \
+ -fout -tout -Rbuck CHIVES1091_AllCondPmod_stats_REML -Rvar CHIVES1091_AllCondPmod_stats_REMLvar \
+ -Rfitts CHIVES1091_AllCondPmod_REML -Rerrts CHIVES1091_AllCondPmod_REML -verb
+ 
+++ N.B.: 3dREMLfit command above written to file CHIVES1091_AllCondPmod_stats.REML_cmd
+++ (b) Visualization/analysis of the matrix via ExamineXmat.R
+++ (c) Synthesis of sub-model datasets using 3dSynthesize
+++ ==========================================================
+++ Wrote matrix values to file CHIVES1091_AllCondPmod_uncensor_xmat.1D
+++ ----- Signal+Baseline matrix condition [X] (349x14):  2.701  ++ VERY GOOD ++
+++ ----- Signal-only matrix condition [X] (349x3):  1.5243  ++ VERY GOOD ++
+++ ----- Baseline-only matrix condition [X] (349x11):  2.61056  ++ VERY GOOD ++
+++ ----- stim_base-only matrix condition [X] (349x5):  1.35999  ++ VERY GOOD ++
+++ ----- polort-only matrix condition [X] (349x6):  1.01561  ++ VERY GOOD ++
+++ +++++ Matrix inverse average error = 1.07466e-15  ++ VERY GOOD ++
+++ Matrix setup time = 0.01 s
+++ Voxels in dataset: 1082035
+++ Voxels in mask:    268029
+++ Voxels per job:    26802
+++ Job #1: processing voxels 248952 to 329191; elapsed time=3.403
+++ Job #2: processing voxels 329192 to 388154; elapsed time=3.424
+++ Job #3: processing voxels 388155 to 444024; elapsed time=3.444
+++ Job #4: processing voxels 444025 to 499100; elapsed time=3.463
+++ Job #5: processing voxels 499101 to 554801; elapsed time=3.483
+++ Job #6: processing voxels 554802 to 616673; elapsed time=3.502
+++ Job #7: processing voxels 616674 to 677997; elapsed time=3.523
+++ Job #8: processing voxels 677998 to 755093; elapsed time=3.543
+++ Job #9: processing voxels 755094 to 1082034; elapsed time=3.564
+++ Job #0: processing voxels 0 to 248951; elapsed time=3.574
+++ voxel loop:0123456789.0123456789.0123456789.0123456789.0123456++ Job #4 finished; elapsed time=4.938
+7++ Job #2 finished; elapsed time=4.972
+++ Job #3 finished; elapsed time=4.997
+++ Job #1 finished; elapsed time=5.001
+++ Job #6 finished; elapsed time=5.014
+++ Job #8 finished; elapsed time=5.031
+8++ Job #5 finished; elapsed time=5.046
+++ Job #7 finished; elapsed time=5.068
+9.
+++ Job #0 waiting for children to finish; elapsed time=5.079
+++ Job #9 finished; elapsed time=5.226
+++ Job #0 now finishing up; elapsed time=5.248
+++ Smallest FDR q [0 Full_Fstat] = 5.64783e-14
+++ Smallest FDR q [2 AllConds#0_Tstat] = 1.23886e-12
+++ Smallest FDR q [4 AllConds#1_Tstat] = 2.32049e-08
+++ Smallest FDR q [5 AllConds_Fstat] = 1.11026e-12
+++ Smallest FDR q [7 BidsNMiss#0_Tstat] = 1.25773e-13
+++ Smallest FDR q [8 BidsNMiss_Fstat] = 1.25773e-13
+++ Smallest FDR q [10 CondGtRest_GLT#0_Tstat] = 1.23886e-12
+++ Smallest FDR q [11 CondGtRest_GLT_Fstat] = 1.23886e-12
+++ Smallest FDR q [13 Pmod_GLT#0_Tstat] = 2.32049e-08
+++ Smallest FDR q [14 Pmod_GLT_Fstat] = 2.32058e-08
+++ Wrote bucket dataset into ./CHIVES1091_AllCondPmod_stats+tlrc.BRIK
+ + created 10 FDR curves in bucket header
+++ Wrote 3D+time dataset into ./CHIVES1091_AllCondPmod+tlrc.BRIK
+++ Wrote 3D+time dataset into ./CHIVES1091_AllCondPmod+tlrc.BRIK
+++ Program finished; elapsed time=20.472
+++ '-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1091/HealthyPmod.1D' has 1 auxiliary values per time point
+++ '-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1091/HealthyPmod.1D' will have 2 regressors
+++ '-stim_times_AM2 2 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1091/UnhealthyPmod.1D' has 1 auxiliary values per time point
+++ '-stim_times_AM2 2 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1091/UnhealthyPmod.1D' will have 2 regressors
+++ '-stim_times_AM1 3 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1091/BidOnsDur.1D' has 1 auxiliary values per time point
+++ '-stim_times_AM1 3': basis function model 'dmBLOCK(1)' uses 1 parameters,
+    out of the 1 found in timing file '/projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1091/BidOnsDur.1D'
+++ 3dDeconvolve extending num_stimts from 3 to 8 due to -ortvec
+++ 3dDeconvolve: AFNI version=AFNI_18.2.04 (Jul  6 2018) [64-bit]
+++ Authored by: B. Douglas Ward, et al.
+++ current memory malloc-ated = 288,076 bytes (about 288 thousand [kilo])
+++ loading dataset /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1091/ses-wave1/func/s6_sub-CHIVES1091_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii
+++ current memory malloc-ated = 290,892 bytes (about 291 thousand [kilo])
+++ forcibly using TR=2.0000 seconds for -input dataset
+++ Skipping check for initial transients
+++ Imaging duration=698.0 s; Automatic polort=5
+++ -stim_times using TR=2 s for stimulus timing conversion
+++ -stim_times using TR=2 s for any -iresp output datasets
+++  [you can alter the -iresp TR via the -TR_times option]
+++ ** -stim_times NOTE ** guessing GLOBAL times if 1 time per line; LOCAL otherwise
+++ ** GUESSED ** -stim_times_AM2 1 using LOCAL times
+++ '-stim_times_AM2 1' average amplitude#1=0.692308
+++ ** GUESSED ** -stim_times_AM2 2 using LOCAL times
+++ '-stim_times_AM2 2' average amplitude#1=0.0172414
+++ ** GUESSED ** -stim_times_AM1 3 using LOCAL times
+------------------------------------------------------------
+GLT matrix from 'SYM: HealthyPmod[0]':
+   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: HealthyPmod[1]':
+   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: UnhealthyPmod[0]':
+   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: UnhealthyPmod[1]':
+   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: HealthyPmod[0] -UnhealthyPmod[0]':
+   0   0   0   0   0   0   1   0  -1   0   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: HealthyPmod[1] -UnhealthyPmod[1]':
+   0   0   0   0   0   0   0   1   0  -1   0   0   0   0   0   0 
+ 
+++ Number of time points: 349 (no censoring)
+ + Number of parameters:  16 [11 baseline ; 5 signal]
+++ total shared memory needed = 3,159,542,200 bytes (about 3.2 billion [giga])
+++ current memory malloc-ated = 1,423,094 bytes (about 1.4 million [mega])
+++ mmap() memory allocated: 3,159,542,200 bytes (about 3.2 billion [giga])
+++ Memory required for output bricks = 3,159,542,200 bytes (about 3.2 billion [giga])
+++ Wrote matrix values to file CHIVES1091_2CondPmod_xmat.1D
+++ ========= Things you can do with the matrix file =========
+++ (a) Linear regression with ARMA(1,1) modeling of serial correlation:
+
+3dREMLfit -matrix CHIVES1091_2CondPmod_xmat.1D -input /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1091/ses-wave1/func/s6_sub-CHIVES1091_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii \
+ -mask /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1091/ses-wave1/func/sub-CHIVES1091_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz \
+ -fout -tout -Rbuck CHIVES1091_2CondPmod_stats_REML -Rvar CHIVES1091_2CondPmod_stats_REMLvar \
+ -Rfitts CHIVES1091_2CondPmod_REML -Rerrts CHIVES1091_2CondPmod_REML -verb
+ 
+++ N.B.: 3dREMLfit command above written to file CHIVES1091_2CondPmod_stats.REML_cmd
+++ (b) Visualization/analysis of the matrix via ExamineXmat.R
+++ (c) Synthesis of sub-model datasets using 3dSynthesize
+++ ==========================================================
+++ Wrote matrix values to file CHIVES1091_2CondPmod_uncensor_xmat.1D
+++ ----- Signal+Baseline matrix condition [X] (349x16):  2.73267  ++ VERY GOOD ++
+++ ----- Signal-only matrix condition [X] (349x5):  1.52503  ++ VERY GOOD ++
+++ ----- Baseline-only matrix condition [X] (349x11):  2.61056  ++ VERY GOOD ++
+++ ----- stim_base-only matrix condition [X] (349x5):  1.35999  ++ VERY GOOD ++
+++ ----- polort-only matrix condition [X] (349x6):  1.01561  ++ VERY GOOD ++
+++ +++++ Matrix inverse average error = 1.16456e-15  ++ VERY GOOD ++
+++ Matrix setup time = 0.02 s
+++ Voxels in dataset: 1082035
+++ Voxels in mask:    268029
+++ Voxels per job:    26802
+++ Job #1: processing voxels 248952 to 329191; elapsed time=3.312
+++ Job #2: processing voxels 329192 to 388154; elapsed time=3.333
+++ Job #3: processing voxels 388155 to 444024; elapsed time=3.353
+++ Job #4: processing voxels 444025 to 499100; elapsed time=3.372
+++ Job #5: processing voxels 499101 to 554801; elapsed time=3.392
+++ Job #6: processing voxels 554802 to 616673; elapsed time=3.411
+++ Job #7: processing voxels 616674 to 677997; elapsed time=3.431
+++ Job #8: processing voxels 677998 to 755093; elapsed time=3.451
+++ Job #9: processing voxels 755094 to 1082034; elapsed time=3.471
+++ Job #0: processing voxels 0 to 248951; elapsed time=3.481
+++ voxel loop:0123456789.0123456789.0123456789.0123456789.01234567++ Job #4 finished; elapsed time=5.397
+++ Job #2 finished; elapsed time=5.444
+8++ Job #3 finished; elapsed time=5.478
+++ Job #1 finished; elapsed time=5.493
+++ Job #6 finished; elapsed time=5.503
+++ Job #5 finished; elapsed time=5.515
+9.
+++ Job #0 waiting for children to finish; elapsed time=5.518
+++ Job #8 finished; elapsed time=5.531
+++ Job #7 finished; elapsed time=5.544
+++ Job #9 finished; elapsed time=5.689
+++ Job #0 now finishing up; elapsed time=5.714
+++ Smallest FDR q [0 Full_Fstat] = 7.23214e-14
+++ Smallest FDR q [2 HealthyPmod#0_Tstat] = 1.38031e-12
+[7m*+ WARNING:[0m Smallest FDR q [4 HealthyPmod#1_Tstat] = 0.18263 ==> few true single voxel detections
+++ Smallest FDR q [5 HealthyPmod_Fstat] = 2.20132e-12
+++ Smallest FDR q [7 UnhealthyPmod#0_Tstat] = 8.43131e-12
+[7m*+ WARNING:[0m Smallest FDR q [9 UnhealthyPmod#1_Tstat] = 0.36259 ==> few true single voxel detections
+++ Smallest FDR q [10 UnhealthyPmod_Fstat] = 1.28253e-11
+++ Smallest FDR q [12 BidsNMiss#0_Tstat] = 1.23888e-13
+++ Smallest FDR q [13 BidsNMiss_Fstat] = 1.23888e-13
+++ Smallest FDR q [15 HealthyGtRest_GLT#0_Tstat] = 1.38031e-12
+++ Smallest FDR q [16 HealthyGtRest_GLT_Fstat] = 1.38036e-12
+[7m*+ WARNING:[0m Smallest FDR q [18 HealthyPmod_GLT#0_Tstat] = 0.18263 ==> few true single voxel detections
+[7m*+ WARNING:[0m Smallest FDR q [19 HealthyPmod_GLT_Fstat] = 0.18209 ==> few true single voxel detections
+++ Smallest FDR q [21 UnhealthyGtRest_GLT#0_Tstat] = 8.43131e-12
+++ Smallest FDR q [22 UnhealthyGtRest_GLT_Fstat] = 8.43192e-12
+[7m*+ WARNING:[0m Smallest FDR q [24 UnhealthyPmod_GLT#0_Tstat] = 0.36259 ==> few true single voxel detections
+[7m*+ WARNING:[0m Smallest FDR q [25 UnhealthyPmod_GLT_Fstat] = 0.36168 ==> few true single voxel detections
+++ Smallest FDR q [27 HealthyGtUnhealthy_GLT#0_Tstat] = 3.97474e-07
+++ Smallest FDR q [28 HealthyGtUnhealthy_GLT_Fstat] = 3.97508e-07
+[7m*+ WARNING:[0m Smallest FDR q [30 HealthyGtUnhealthyPmod_GLT#0_Tstat] = 0.42889 ==> few true single voxel detections
+[7m*+ WARNING:[0m Smallest FDR q [31 HealthyGtUnhealthyPmod_GLT_Fstat] = 0.42778 ==> few true single voxel detections
+++ Wrote bucket dataset into ./CHIVES1091_2CondPmod_stats+tlrc.BRIK
+ + created 21 FDR curves in bucket header
+++ Wrote 3D+time dataset into ./CHIVES1091_2CondPmod+tlrc.BRIK
+++ Wrote 3D+time dataset into ./CHIVES1091_2CondPmod+tlrc.BRIK
+++ Program finished; elapsed time=35.111
+++ '-stim_times_AM1 3 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1091/BidOnsDur.1D' has 1 auxiliary values per time point
+++ '-stim_times_AM1 3': basis function model 'dmBLOCK(1)' uses 1 parameters,
+    out of the 1 found in timing file '/projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1091/BidOnsDur.1D'
+++ 3dDeconvolve extending num_stimts from 3 to 8 due to -ortvec
+++ 3dDeconvolve: AFNI version=AFNI_18.2.04 (Jul  6 2018) [64-bit]
+++ Authored by: B. Douglas Ward, et al.
+++ current memory malloc-ated = 271,852 bytes (about 272 thousand [kilo])
+++ loading dataset /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1091/ses-wave1/func/s6_sub-CHIVES1091_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii
+++ current memory malloc-ated = 274,668 bytes (about 275 thousand [kilo])
+++ forcibly using TR=2.0000 seconds for -input dataset
+++ Skipping check for initial transients
+++ Imaging duration=698.0 s; Automatic polort=5
+++ -stim_times using TR=2 s for stimulus timing conversion
+++ -stim_times using TR=2 s for any -iresp output datasets
+++  [you can alter the -iresp TR via the -TR_times option]
+++ ** -stim_times NOTE ** guessing GLOBAL times if 1 time per line; LOCAL otherwise
+++ ** GUESSED ** -stim_times 1 using LOCAL times
+++ ** GUESSED ** -stim_times 2 using LOCAL times
+++ ** GUESSED ** -stim_times_AM1 3 using LOCAL times
+------------------------------------------------------------
+GLT matrix from 'SYM: Healthy':
+   0   0   0   0   0   0   1   0   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: Unhealthy':
+   0   0   0   0   0   0   0   1   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: Healthy -Unhealthy':
+   0   0   0   0   0   0   1  -1   0   0   0   0   0   0 
+ 
+++ Number of time points: 349 (no censoring)
+ + Number of parameters:  14 [11 baseline ; 3 signal]
+++ total shared memory needed = 3,103,276,380 bytes (about 3.1 billion [giga])
+++ current memory malloc-ated = 1,402,380 bytes (about 1.4 million [mega])
+++ mmap() memory allocated: 3,103,276,380 bytes (about 3.1 billion [giga])
+++ Memory required for output bricks = 3,103,276,380 bytes (about 3.1 billion [giga])
+++ Wrote matrix values to file CHIVES1091_2Cond_xmat.1D
+++ ========= Things you can do with the matrix file =========
+++ (a) Linear regression with ARMA(1,1) modeling of serial correlation:
+
+3dREMLfit -matrix CHIVES1091_2Cond_xmat.1D -input /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1091/ses-wave1/func/s6_sub-CHIVES1091_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii \
+ -mask /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1091/ses-wave1/func/sub-CHIVES1091_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz \
+ -fout -tout -Rbuck CHIVES1091_2Cond_stats_REML -Rvar CHIVES1091_2Cond_stats_REMLvar \
+ -Rfitts CHIVES1091_2Cond_REML -Rerrts CHIVES1091_2Cond_REML -verb
+ 
+++ N.B.: 3dREMLfit command above written to file CHIVES1091_2Cond_stats.REML_cmd
+++ (b) Visualization/analysis of the matrix via ExamineXmat.R
+++ (c) Synthesis of sub-model datasets using 3dSynthesize
+++ ==========================================================
+++ Wrote matrix values to file CHIVES1091_2Cond_uncensor_xmat.1D
+++ ----- Signal+Baseline matrix condition [X] (349x14):  2.70773  ++ VERY GOOD ++
+++ ----- Signal-only matrix condition [X] (349x3):  1.5245  ++ VERY GOOD ++
+++ ----- Baseline-only matrix condition [X] (349x11):  2.61056  ++ VERY GOOD ++
+++ ----- stim_base-only matrix condition [X] (349x5):  1.35999  ++ VERY GOOD ++
+++ ----- polort-only matrix condition [X] (349x6):  1.01561  ++ VERY GOOD ++
+++ +++++ Matrix inverse average error = 1.47942e-15  ++ VERY GOOD ++
+++ Matrix setup time = 0.01 s
+++ Voxels in dataset: 1082035
+++ Voxels in mask:    268029
+++ Voxels per job:    26802
+++ Job #1: processing voxels 248952 to 329191; elapsed time=3.461
+++ Job #2: processing voxels 329192 to 388154; elapsed time=3.481
+++ Job #3: processing voxels 388155 to 444024; elapsed time=3.499
+++ Job #4: processing voxels 444025 to 499100; elapsed time=3.516
+++ Job #5: processing voxels 499101 to 554801; elapsed time=3.533
+++ Job #6: processing voxels 554802 to 616673; elapsed time=3.550
+++ Job #7: processing voxels 616674 to 677997; elapsed time=3.567
+++ Job #8: processing voxels 677998 to 755093; elapsed time=3.584
+++ Job #9: processing voxels 755094 to 1082034; elapsed time=3.602
+++ Job #0: processing voxels 0 to 248951; elapsed time=3.612
+++ voxel loop:0123456789.0123456789.0123456789.0123456789.0123456++ Job #4 finished; elapsed time=5.190
+7++ Job #2 finished; elapsed time=5.198
+++ Job #6 finished; elapsed time=5.240
+++ Job #3 finished; elapsed time=5.247
+++ Job #1 finished; elapsed time=5.258
+++ Job #5 finished; elapsed time=5.272
+++ Job #8 finished; elapsed time=5.272
+8++ Job #7 finished; elapsed time=5.301
+9.
+++ Job #0 waiting for children to finish; elapsed time=5.326
+++ Job #9 finished; elapsed time=5.448
+++ Job #0 now finishing up; elapsed time=5.471
+++ Smallest FDR q [0 Full_Fstat] = 6.09712e-14
+++ Smallest FDR q [2 Healthy#0_Tstat] = 1.44943e-12
+++ Smallest FDR q [3 Healthy_Fstat] = 1.44948e-12
+++ Smallest FDR q [5 Unhealthy#0_Tstat] = 8.446e-12
+++ Smallest FDR q [6 Unhealthy_Fstat] = 8.44609e-12
+++ Smallest FDR q [8 BidsNMiss#0_Tstat] = 1.27915e-13
+++ Smallest FDR q [9 BidsNMiss_Fstat] = 1.27909e-13
+++ Smallest FDR q [11 HealthyGtRest_GLT#0_Tstat] = 1.44943e-12
+++ Smallest FDR q [12 HealthyGtRest_GLT_Fstat] = 1.44948e-12
+++ Smallest FDR q [14 UnhealthyGtRest_GLT#0_Tstat] = 8.446e-12
+++ Smallest FDR q [15 UnhealthyGtRest_GLT_Fstat] = 8.44584e-12
+++ Smallest FDR q [17 HealthyGtUnhealthy_GLT#0_Tstat] = 1.08213e-06
+++ Smallest FDR q [18 HealthyGtUnhealthy_GLT_Fstat] = 1.08198e-06
+++ Wrote bucket dataset into ./CHIVES1091_2Cond_stats+tlrc.BRIK
+ + created 13 FDR curves in bucket header
+++ Wrote 3D+time dataset into ./CHIVES1091_2Cond+tlrc.BRIK
+++ Wrote 3D+time dataset into ./CHIVES1091_2Cond+tlrc.BRIK
+++ Program finished; elapsed time=23.808

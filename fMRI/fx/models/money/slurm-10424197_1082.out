@@ -1,0 +1,393 @@
+** AFNI converts NIFTI_datatype=4 (INT16) in file /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/s6_sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii to FLOAT32
+     Warnings of this type will be muted for this session.
+     Set AFNI_NIFTI_TYPE_WARN to YES to see them all, NO to see none.
+++ '-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1082/AllCondsPmod.1D' has 1 auxiliary values per time point
+++ '-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1082/AllCondsPmod.1D' will have 2 regressors
+++ '-stim_times_AM1 2 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1082/BidOnsDur.1D' has 1 auxiliary values per time point
+++ '-stim_times_AM1 2': basis function model 'dmBLOCK(1)' uses 1 parameters,
+    out of the 1 found in timing file '/projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1082/BidOnsDur.1D'
+++ 3dDeconvolve extending num_stimts from 2 to 6 due to -ortvec
+++ 3dDeconvolve: AFNI version=AFNI_18.2.04 (Jul  6 2018) [64-bit]
+++ Authored by: B. Douglas Ward, et al.
+++ current memory malloc-ated = 254,307 bytes (about 254 thousand [kilo])
+++ loading dataset /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/s6_sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii
+++ current memory malloc-ated = 1,545,403,167 bytes (about 1.5 billion [giga])
+++ forcibly using TR=2.0000 seconds for -input dataset
+++ Skipping check for initial transients
+++ Imaging duration=714.0 s; Automatic polort=5
+++ -stim_times using TR=2 s for stimulus timing conversion
+++ -stim_times using TR=2 s for any -iresp output datasets
+++  [you can alter the -iresp TR via the -TR_times option]
+++ ** -stim_times NOTE ** guessing GLOBAL times if 1 time per line; LOCAL otherwise
+++ ** GUESSED ** -stim_times_AM2 1 using LOCAL times
+++ '-stim_times_AM2 1' average amplitude#1=0
+++ ** GUESSED ** -stim_times_AM1 2 using LOCAL times
+------------------------------------------------------------
+GLT matrix from 'SYM: AllConds[0]':
+   0   0   0   0   0   0   1   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: AllConds[1]':
+   0   0   0   0   0   0   0   1   0   0   0   0   0 
+ 
+++ Number of time points: 357 (no censoring)
+ + Number of parameters:  13 [10 baseline ; 3 signal]
+++ total shared memory needed = 3,155,214,060 bytes (about 3.2 billion [giga])
+++ current memory malloc-ated = 1,546,531,101 bytes (about 1.5 billion [giga])
+++ mmap() memory allocated: 3,155,214,060 bytes (about 3.2 billion [giga])
+++ Memory required for output bricks = 3,155,214,060 bytes (about 3.2 billion [giga])
+++ Wrote matrix values to file CHIVES1082_AllCondPmod_xmat.1D
+++ ========= Things you can do with the matrix file =========
+++ (a) Linear regression with ARMA(1,1) modeling of serial correlation:
+
+3dREMLfit -matrix CHIVES1082_AllCondPmod_xmat.1D -input /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/s6_sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii \
+ -mask /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz \
+ -fout -tout -Rbuck CHIVES1082_AllCondPmod_stats_REML -Rvar CHIVES1082_AllCondPmod_stats_REMLvar \
+ -Rfitts CHIVES1082_AllCondPmod_REML -Rerrts CHIVES1082_AllCondPmod_REML -verb
+ 
+++ N.B.: 3dREMLfit command above written to file CHIVES1082_AllCondPmod_stats.REML_cmd
+++ (b) Visualization/analysis of the matrix via ExamineXmat.R
+++ (c) Synthesis of sub-model datasets using 3dSynthesize
+++ ==========================================================
+++ Wrote matrix values to file CHIVES1082_AllCondPmod_uncensor_xmat.1D
+[7m*+ WARNING:[0m -------------------------------------------------
+[7m*+ WARNING:[0m Problems with the X matrix columns, listed below:
+[7m*+ WARNING:[0m !! * Column 7 [AllConds#1] is all zeros
+[7m*+ WARNING:[0m -------------------------------------------------
+++ ----- Signal+Baseline matrix condition [X] (357x13):  2.7355  ++ VERY GOOD ++
+[7m*+ WARNING:[0m !! in Signal+Baseline matrix:
+ * Largest singular value=1.48879
+ * 1 singular value is less than cutoff=1.48879e-07
+ * Implies strong collinearity in the matrix columns! 
+++ Signal+Baseline matrix singular values:
+             0      0.198958      0.283509      0.311593      0.766342
+      0.954006      0.995079       1.00445        1.0336       1.05571
+       1.37646       1.41155       1.48879
+++ ----- Signal-only matrix condition [X] (357x3):  1.20528  ++ VERY GOOD ++
+[7m*+ WARNING:[0m !! in Signal-only matrix:
+ * Largest singular value=1.1649
+ * 1 singular value is less than cutoff=1.1649e-07
+ * Implies strong collinearity in the matrix columns! 
+++ Signal-only matrix singular values:
+             0      0.801882        1.1649
+++ ----- Baseline-only matrix condition [X] (357x10):  2.63585  ++ VERY GOOD ++
+++ ----- stim_base-only matrix condition [X] (357x4):  1.12346  ++ VERY GOOD ++
+++ ----- polort-only matrix condition [X] (357x6):  1.01526  ++ VERY GOOD ++
+[7m*+ WARNING:[0m +++++ !! Matrix inverse average error = 0.00591716  ** BEWARE **
+[7m*+ WARNING:[0m GLT setup: inversion of C[1/(X'X)]C' fails; trying SVD.
+   [This happens when some regressor columns are all ]
+   [zero, or when the GLT has linearly-dependent rows]
+   [********* EXAMINE YOUR RESULTS WITH CARE ********]
+++ Matrix setup time = 0.02 s
+[7m** ERROR:[0m !! 3dDeconvolve: Can't run past 4 matrix warnings without '-GOFORIT 4'
+[7m** ERROR:[0m !!                Currently at -GOFORIT 0
+[7m** ERROR:[0m !! See file 3dDeconvolve.err for all WARNING and ERROR messages !!
+[7m** ERROR:[0m !! Be sure you understand what you are doing before using -GOFORIT !!
+[7m** ERROR:[0m !! If in doubt, consult with someone or with the AFNI message board !!
+[7m** FATAL ERROR:[0m !! 3dDeconvolve (regretfully) shuts itself down !!
+** Program compile date = Jul  6 2018
+++ 3dREMLfit: AFNI version=AFNI_18.2.04 (Jul  6 2018) [64-bit]
+++ Authored by: RWCox
+** AFNI converts NIFTI_datatype=4 (INT16) in file /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/s6_sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii to FLOAT32
+     Warnings of this type will be muted for this session.
+     Set AFNI_NIFTI_TYPE_WARN to YES to see them all, NO to see none.
+++ Number of voxels in mask = 267266
+++ Number of OpenMP threads = 15
+[7m** ERROR:[0m matrix column #7 is all zero!?
+[7m** FATAL ERROR:[0m Can't continue with all zero column without -GOFORIT option!
+** Program compile date = Jul  6 2018
+** AFNI converts NIFTI_datatype=4 (INT16) in file /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/s6_sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii to FLOAT32
+     Warnings of this type will be muted for this session.
+     Set AFNI_NIFTI_TYPE_WARN to YES to see them all, NO to see none.
+++ '-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1082/HealthyPmod.1D' has 1 auxiliary values per time point
+++ '-stim_times_AM2 1 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1082/HealthyPmod.1D' will have 2 regressors
+++ '-stim_times_AM2 2 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1082/UnhealthyPmod.1D' has 1 auxiliary values per time point
+++ '-stim_times_AM2 2 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1082/UnhealthyPmod.1D' will have 2 regressors
+++ '-stim_times_AM1 3 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1082/BidOnsDur.1D' has 1 auxiliary values per time point
+++ '-stim_times_AM1 3': basis function model 'dmBLOCK(1)' uses 1 parameters,
+    out of the 1 found in timing file '/projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1082/BidOnsDur.1D'
+++ 3dDeconvolve extending num_stimts from 3 to 7 due to -ortvec
+++ 3dDeconvolve: AFNI version=AFNI_18.2.04 (Jul  6 2018) [64-bit]
+++ Authored by: B. Douglas Ward, et al.
+++ current memory malloc-ated = 281,573 bytes (about 282 thousand [kilo])
+++ loading dataset /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/s6_sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii
+++ current memory malloc-ated = 1,545,430,433 bytes (about 1.5 billion [giga])
+++ forcibly using TR=2.0000 seconds for -input dataset
+++ Skipping check for initial transients
+++ Imaging duration=714.0 s; Automatic polort=5
+++ -stim_times using TR=2 s for stimulus timing conversion
+++ -stim_times using TR=2 s for any -iresp output datasets
+++  [you can alter the -iresp TR via the -TR_times option]
+++ ** -stim_times NOTE ** guessing GLOBAL times if 1 time per line; LOCAL otherwise
+++ ** GUESSED ** -stim_times_AM2 1 using LOCAL times
+++ '-stim_times_AM2 1' average amplitude#1=0
+++ ** GUESSED ** -stim_times_AM2 2 using LOCAL times
+++ '-stim_times_AM2 2' average amplitude#1=0
+++ ** GUESSED ** -stim_times_AM1 3 using LOCAL times
+------------------------------------------------------------
+GLT matrix from 'SYM: HealthyPmod[0]':
+   0   0   0   0   0   0   1   0   0   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: HealthyPmod[1]':
+   0   0   0   0   0   0   0   1   0   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: UnhealthyPmod[0]':
+   0   0   0   0   0   0   0   0   1   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: UnhealthyPmod[1]':
+   0   0   0   0   0   0   0   0   0   1   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: HealthyPmod[0] -UnhealthyPmod[0]':
+   0   0   0   0   0   0   1   0  -1   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: HealthyPmod[1] -UnhealthyPmod[1]':
+   0   0   0   0   0   0   0   1   0  -1   0   0   0   0   0 
+ 
+++ Number of time points: 357 (no censoring)
+ + Number of parameters:  15 [10 baseline ; 5 signal]
+++ total shared memory needed = 3,228,792,440 bytes (about 3.2 billion [giga])
+++ current memory malloc-ated = 1,546,562,935 bytes (about 1.5 billion [giga])
+++ mmap() memory allocated: 3,228,792,440 bytes (about 3.2 billion [giga])
+++ Memory required for output bricks = 3,228,792,440 bytes (about 3.2 billion [giga])
+++ Wrote matrix values to file CHIVES1082_2CondPmod_xmat.1D
+++ ========= Things you can do with the matrix file =========
+++ (a) Linear regression with ARMA(1,1) modeling of serial correlation:
+
+3dREMLfit -matrix CHIVES1082_2CondPmod_xmat.1D -input /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/s6_sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii \
+ -mask /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz \
+ -fout -tout -Rbuck CHIVES1082_2CondPmod_stats_REML -Rvar CHIVES1082_2CondPmod_stats_REMLvar \
+ -Rfitts CHIVES1082_2CondPmod_REML -Rerrts CHIVES1082_2CondPmod_REML -verb
+ 
+++ N.B.: 3dREMLfit command above written to file CHIVES1082_2CondPmod_stats.REML_cmd
+++ (b) Visualization/analysis of the matrix via ExamineXmat.R
+++ (c) Synthesis of sub-model datasets using 3dSynthesize
+++ ==========================================================
+++ Wrote matrix values to file CHIVES1082_2CondPmod_uncensor_xmat.1D
+[7m*+ WARNING:[0m -------------------------------------------------
+[7m*+ WARNING:[0m Problems with the X matrix columns, listed below:
+[7m*+ WARNING:[0m !! * Column 7 [HealthyPmod#1] is all zeros
+[7m*+ WARNING:[0m !! * Column 9 [UnhealthyPmod#1] is all zeros
+[7m*+ WARNING:[0m -------------------------------------------------
+++ ----- Signal+Baseline matrix condition [X] (357x15):  2.80447  ++ VERY GOOD ++
+[7m*+ WARNING:[0m !! in Signal+Baseline matrix:
+ * Largest singular value=1.48944
+ * 2 singular values are less than cutoff=1.48944e-07
+ * Implies strong collinearity in the matrix columns! 
+++ Signal+Baseline matrix singular values:
+             0   1.40689e-08      0.189374      0.282942      0.309938
+      0.766694      0.942213      0.966751      0.995511       1.02149
+       1.04972       1.05611       1.37663       1.41864       1.48944
+++ ----- Signal-only matrix condition [X] (357x5):  1.20532  ++ VERY GOOD ++
+[7m*+ WARNING:[0m !! in Signal-only matrix:
+ * Largest singular value=1.16534
+ * 2 singular values are less than cutoff=1.16534e-07
+ * Implies strong collinearity in the matrix columns! 
+++ Signal-only matrix singular values:
+             0   1.49012e-08      0.802137       0.99928       1.16534
+++ ----- Baseline-only matrix condition [X] (357x10):  2.63585  ++ VERY GOOD ++
+++ ----- stim_base-only matrix condition [X] (357x4):  1.12346  ++ VERY GOOD ++
+++ ----- polort-only matrix condition [X] (357x6):  1.01526  ++ VERY GOOD ++
+[7m*+ WARNING:[0m +++++ !! Matrix inverse average error = 0.00888889  ** BEWARE **
+[7m*+ WARNING:[0m GLT setup: inversion of C[1/(X'X)]C' fails; trying SVD.
+   [This happens when some regressor columns are all ]
+   [zero, or when the GLT has linearly-dependent rows]
+   [********* EXAMINE YOUR RESULTS WITH CARE ********]
+[7m*+ WARNING:[0m GLT setup: inversion of C[1/(X'X)]C' fails; trying SVD.
+   [This happens when some regressor columns are all ]
+   [zero, or when the GLT has linearly-dependent rows]
+   [********* EXAMINE YOUR RESULTS WITH CARE ********]
+[7m*+ WARNING:[0m GLT setup: inversion of C[1/(X'X)]C' fails; trying SVD.
+   [This happens when some regressor columns are all ]
+   [zero, or when the GLT has linearly-dependent rows]
+   [********* EXAMINE YOUR RESULTS WITH CARE ********]
+++ Matrix setup time = 0.02 s
+[7m** ERROR:[0m !! 3dDeconvolve: Can't run past 5 matrix warnings without '-GOFORIT 5'
+[7m** ERROR:[0m !!                Currently at -GOFORIT 0
+[7m** ERROR:[0m !! See file 3dDeconvolve.err for all WARNING and ERROR messages !!
+[7m** ERROR:[0m !! Be sure you understand what you are doing before using -GOFORIT !!
+[7m** ERROR:[0m !! If in doubt, consult with someone or with the AFNI message board !!
+[7m** FATAL ERROR:[0m !! 3dDeconvolve (regretfully) shuts itself down !!
+** Program compile date = Jul  6 2018
+++ 3dREMLfit: AFNI version=AFNI_18.2.04 (Jul  6 2018) [64-bit]
+++ Authored by: RWCox
+** AFNI converts NIFTI_datatype=4 (INT16) in file /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/s6_sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii to FLOAT32
+     Warnings of this type will be muted for this session.
+     Set AFNI_NIFTI_TYPE_WARN to YES to see them all, NO to see none.
+++ Number of voxels in mask = 267266
+++ Number of OpenMP threads = 15
+[7m** ERROR:[0m matrix column #7 is all zero!?
+[7m** ERROR:[0m matrix column #9 is all zero!?
+[7m** FATAL ERROR:[0m Can't continue with all zero columns without -GOFORIT option!
+** Program compile date = Jul  6 2018
+** AFNI converts NIFTI_datatype=4 (INT16) in file /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/s6_sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii to FLOAT32
+     Warnings of this type will be muted for this session.
+     Set AFNI_NIFTI_TYPE_WARN to YES to see them all, NO to see none.
+++ '-stim_times_AM1 3 /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1082/BidOnsDur.1D' has 1 auxiliary values per time point
+++ '-stim_times_AM1 3': basis function model 'dmBLOCK(1)' uses 1 parameters,
+    out of the 1 found in timing file '/projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/behavioral/money/afni_timing_files/CHIVES1082/BidOnsDur.1D'
+++ 3dDeconvolve extending num_stimts from 3 to 7 due to -ortvec
+++ 3dDeconvolve: AFNI version=AFNI_18.2.04 (Jul  6 2018) [64-bit]
+++ Authored by: B. Douglas Ward, et al.
+++ current memory malloc-ated = 265,493 bytes (about 265 thousand [kilo])
+++ loading dataset /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/s6_sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii
+++ current memory malloc-ated = 1,545,414,353 bytes (about 1.5 billion [giga])
+++ forcibly using TR=2.0000 seconds for -input dataset
+++ Skipping check for initial transients
+++ Imaging duration=714.0 s; Automatic polort=5
+++ -stim_times using TR=2 s for stimulus timing conversion
+++ -stim_times using TR=2 s for any -iresp output datasets
+++  [you can alter the -iresp TR via the -TR_times option]
+++ ** -stim_times NOTE ** guessing GLOBAL times if 1 time per line; LOCAL otherwise
+++ ** GUESSED ** -stim_times 1 using LOCAL times
+++ ** GUESSED ** -stim_times 2 using LOCAL times
+++ ** GUESSED ** -stim_times_AM1 3 using LOCAL times
+------------------------------------------------------------
+GLT matrix from 'SYM: Healthy':
+   0   0   0   0   0   0   1   0   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: Unhealthy':
+   0   0   0   0   0   0   0   1   0   0   0   0   0 
+ 
+------------------------------------------------------------
+GLT matrix from 'SYM: Healthy -Unhealthy':
+   0   0   0   0   0   0   1  -1   0   0   0   0   0 
+ 
+++ Number of time points: 357 (no censoring)
+ + Number of parameters:  13 [10 baseline ; 3 signal]
+++ total shared memory needed = 3,172,526,620 bytes (about 3.2 billion [giga])
+++ current memory malloc-ated = 1,546,542,325 bytes (about 1.5 billion [giga])
+++ mmap() memory allocated: 3,172,526,620 bytes (about 3.2 billion [giga])
+++ Memory required for output bricks = 3,172,526,620 bytes (about 3.2 billion [giga])
+++ Wrote matrix values to file CHIVES1082_2Cond_xmat.1D
+++ ========= Things you can do with the matrix file =========
+++ (a) Linear regression with ARMA(1,1) modeling of serial correlation:
+
+3dREMLfit -matrix CHIVES1082_2Cond_xmat.1D -input /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/s6_sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii \
+ -mask /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_brainmask.nii.gz \
+ -fout -tout -Rbuck CHIVES1082_2Cond_stats_REML -Rvar CHIVES1082_2Cond_stats_REMLvar \
+ -Rfitts CHIVES1082_2Cond_REML -Rerrts CHIVES1082_2Cond_REML -verb
+ 
+++ N.B.: 3dREMLfit command above written to file CHIVES1082_2Cond_stats.REML_cmd
+++ (b) Visualization/analysis of the matrix via ExamineXmat.R
+++ (c) Synthesis of sub-model datasets using 3dSynthesize
+++ ==========================================================
+++ Wrote matrix values to file CHIVES1082_2Cond_uncensor_xmat.1D
+++ ----- Signal+Baseline matrix condition [X] (357x13):  2.80447  ++ VERY GOOD ++
+++ ----- Signal-only matrix condition [X] (357x3):  1.20532  ++ VERY GOOD ++
+++ ----- Baseline-only matrix condition [X] (357x10):  2.63585  ++ VERY GOOD ++
+++ ----- stim_base-only matrix condition [X] (357x4):  1.12346  ++ VERY GOOD ++
+++ ----- polort-only matrix condition [X] (357x6):  1.01526  ++ VERY GOOD ++
+++ +++++ Matrix inverse average error = 8.99164e-16  ++ VERY GOOD ++
+++ Matrix setup time = 0.02 s
+++ Voxels in dataset: 1082035
+++ Voxels in mask:    267266
+++ Voxels per job:    13363
+++ Job #1: processing voxels 182999 to 240030; elapsed time=4.187
+++ Job #2: processing voxels 240031 to 286018; elapsed time=4.207
+++ Job #3: processing voxels 286019 to 326235; elapsed time=4.230
+++ Job #4: processing voxels 326236 to 353890; elapsed time=4.252
+++ Job #5: processing voxels 353891 to 384046; elapsed time=4.274
+++ Job #6: processing voxels 384047 to 410184; elapsed time=4.296
+++ Job #7: processing voxels 410185 to 439354; elapsed time=4.319
+++ Job #8: processing voxels 439355 to 464941; elapsed time=4.341
+++ Job #9: processing voxels 464942 to 493995; elapsed time=4.364
+++ Job #10: processing voxels 493996 to 519699; elapsed time=4.387
+++ Job #11: processing voxels 519700 to 549530; elapsed time=4.410
+++ Job #12: processing voxels 549531 to 576012; elapsed time=4.433
+++ Job #13: processing voxels 576013 to 607188; elapsed time=4.466
+++ Job #14: processing voxels 607189 to 639374; elapsed time=4.494
+++ Job #15: processing voxels 639375 to 672760; elapsed time=4.504
+++ Job #16: processing voxels 672761 to 707843; elapsed time=4.542
+++ Job #17: processing voxels 707844 to 750636; elapsed time=4.553
+++ Job #18: processing voxels 750637 to 798447; elapsed time=4.592
+++ Job #0: processing voxels 0 to 182998; elapsed time=4.614
+++ voxel loop:0123456++ Job #19: processing voxels 798448 to 1082034; elapsed time=4.617
+789.0123456789.0123456789.0123456789.++ Job #2 finished; elapsed time=5.102
+++ Job #1 finished; elapsed time=5.127
+0++ Job #5 finished; elapsed time=5.165
+12++ Job #3 finished; elapsed time=5.177
+++ Job #4 finished; elapsed time=5.183
+++ Job #6 finished; elapsed time=5.187
+++ Job #8 finished; elapsed time=5.238
+++ Job #7 finished; elapsed time=5.248
+3++ Job #10 finished; elapsed time=5.281
+++ Job #9 finished; elapsed time=5.281
+45++ Job #12 finished; elapsed time=5.329
+++ Job #13 finished; elapsed time=5.357
+6++ Job #15 finished; elapsed time=5.401
+++ Job #11 finished; elapsed time=5.408
+78++ Job #17 finished; elapsed time=5.451
+++ Job #16 finished; elapsed time=5.454
+9.
+++ Job #0 waiting for children to finish; elapsed time=5.491
+++ Job #18 finished; elapsed time=5.586
+++ Job #14 finished; elapsed time=5.640
+++ Job #19 finished; elapsed time=5.782
+++ Job #0 now finishing up; elapsed time=5.802
+++ Smallest FDR q [0 Full_Fstat] = 2.43954e-14
+++ Smallest FDR q [2 Healthy#0_Tstat] = 0.000123137
+++ Smallest FDR q [3 Healthy_Fstat] = 0.000123146
+++ Smallest FDR q [5 Unhealthy#0_Tstat] = 5.31861e-09
+++ Smallest FDR q [6 Unhealthy_Fstat] = 5.31773e-09
+++ Smallest FDR q [8 BidsNMiss#0_Tstat] = 3.69725e-14
+++ Smallest FDR q [9 BidsNMiss_Fstat] = 3.6973e-14
+++ Smallest FDR q [11 HealthyGtRest_GLT#0_Tstat] = 0.000123137
+++ Smallest FDR q [12 HealthyGtRest_GLT_Fstat] = 0.000123145
+++ Smallest FDR q [14 UnhealthyGtRest_GLT#0_Tstat] = 5.31861e-09
+++ Smallest FDR q [15 UnhealthyGtRest_GLT_Fstat] = 5.31774e-09
+++ Smallest FDR q [17 HealthyGtUnhealthy_GLT#0_Tstat] = 0.000456165
+++ Smallest FDR q [18 HealthyGtUnhealthy_GLT_Fstat] = 0.000456158
+++ Wrote bucket dataset into ./CHIVES1082_2Cond_stats+tlrc.BRIK
+ + created 13 FDR curves in bucket header
+++ Wrote 3D+time dataset into ./CHIVES1082_2Cond+tlrc.BRIK
+++ Wrote 3D+time dataset into ./CHIVES1082_2Cond+tlrc.BRIK
+++ Program finished; elapsed time=25.777
+++ 3dREMLfit: AFNI version=AFNI_18.2.04 (Jul  6 2018) [64-bit]
+++ Authored by: RWCox
+** AFNI converts NIFTI_datatype=4 (INT16) in file /projects/sanlab/shared/CHIVES/bids_data/derivatives/fmriprep/sub-CHIVES1082/ses-wave1/func/s6_sub-CHIVES1082_ses-wave1_task-money_bold_space-MNI152NLin2009cAsym_preproc.nii to FLOAT32
+     Warnings of this type will be muted for this session.
+     Set AFNI_NIFTI_TYPE_WARN to YES to see them all, NO to see none.
+++ Number of voxels in mask = 267266
+++ Number of OpenMP threads = 15
+++ -----  matrix condition (357x13):  2.80447  ++ VERY GOOD ++
+++ Loading input dataset into memory
+++ Converting input dataset to vector image
+ +  dataset = 1.5 billion [giga] bytes
+ +  vectim  = 383 million [mega] bytes
+++ starting REML setup calculations; total CPU=0.00 Elapsed=5.14
+ + X matrix: 88.020% of elements are nonzero
+ + starting 15 OpenMP threads for REML setup
+ + REML setup finished: matrix rows=357 cols=13; 109*1 cases; total CPU=0.00 Elapsed=5.15
+ +  average case bandwidth = 13.00
+++ REML voxel loop: [15 threads]0123456789.012
+ + ARMA voxel parameters estimated: total CPU=0.00 Elapsed=21.18
+++ GLSQ loop:0123456789.0123456789.0123456789.0123456789.0123456789.
+ + GLSQ regression done: total CPU=0.00 Elapsed=49.70
+++ Output dataset ./CHIVES1082_2Cond_stats_REMLvar+tlrc.BRIK
+++ Output dataset ./CHIVES1082_2Cond_REML+tlrc.BRIK
+[7m** ERROR:[0m output dataset name 'CHIVES1082_2Cond_REML' conflicts with existing file
+[7m** ERROR:[0m dataset NOT written to disk!
+++ creating FDR curves in dataset CHIVES1082_2Cond_stats_REML+tlrc
+++ Smallest FDR q [0 Full_Fstat] = 9.09159e-14
+++ Smallest FDR q [2 Healthy#0_Tstat] = 0.00495439
+++ Smallest FDR q [3 Healthy_Fstat] = 0.00495439
+++ Smallest FDR q [5 Unhealthy#0_Tstat] = 1.3902e-05
+++ Smallest FDR q [6 Unhealthy_Fstat] = 1.3902e-05
+++ Smallest FDR q [8 BidsNMiss#0_Tstat] = 9.09964e-14
+++ Smallest FDR q [9 BidsNMiss_Fstat] = 9.09964e-14
+++ Smallest FDR q [11 HealthyGtRest#0_Tstat] = 0.00495439
+++ Smallest FDR q [12 HealthyGtRest_Fstat] = 0.00495439
+++ Smallest FDR q [14 UnhealthyGtRest#0_Tstat] = 1.3902e-05
+++ Smallest FDR q [15 UnhealthyGtRest_Fstat] = 1.3902e-05
+[7m*+ WARNING:[0m Smallest FDR q [17 HealthyGtUnhealthy#0_Tstat] = 0.999733 ==> few true single voxel detections
+[7m*+ WARNING:[0m Smallest FDR q [18 HealthyGtUnhealthy_Fstat] = 0.999733 ==> few true single voxel detections
+ + Added 13 FDR curves to dataset CHIVES1082_2Cond_stats_REML+tlrc
+++ Output dataset ./CHIVES1082_2Cond_stats_REML+tlrc.BRIK
+ + unloading input dataset and REML matrices
+++ 3dREMLfit is all done! total CPU=0.00 Elapsed=68.67

@@ -3,7 +3,6 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=20
 #SBATCH --mem=124000
-#SBATCH --partition=ctn
 #SBATCH --account=sanlab
 #SBATCH --array=1007,1013,1014,1021,1022,1024,1025,1034,1041,1044,1045,1049,1050,1056,1058,1059,1060,1063,1065,1066,1069,1072,1074,1075,1077,1078,1087,1089,1091,1095,1097,1100,1103%30
 
@@ -48,6 +47,11 @@ cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/${sub}
 	-errts ${sub}_AllCondPmod -fitts ${sub}_AllCondPmod -bucket ${sub}_AllCondPmod_stats -overwrite
 
 ##
+## Try running reml
+chmod +x CHIVES*
+./${sub}_AllCondPmod_stats.REML_cmd
+#
+
 
 3dDeconvolve 	\
 	-force_TR 2 \
@@ -78,6 +82,10 @@ cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/${sub}
 	-errts ${sub}_2CondPmod -fitts ${sub}_2CondPmod -bucket ${sub}_2CondPmod_stats -overwrite
 
 	##
+	## Try running reml
+chmod +x CHIVES*
+./${sub}_2CondPmod_stats.REML_cmd
+	##
 
 3dDeconvolve 	\
 	-force_TR 2 \
@@ -100,3 +108,10 @@ cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/${sub}
 	-fout -tout -x1D ${sub}_2Cond_xmat.1D \
 	-x1D_uncensored ${sub}_2Cond_uncensor_xmat.1D \
 	-errts ${sub}_2Cond -fitts ${sub}_2Cond -bucket ${sub}_2Cond_stats -overwrite
+	## Try running reml
+chmod +x CHIVES*
+./${sub}_2Cond_stats.REML_cmd
+	##
+
+
+
