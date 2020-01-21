@@ -12,7 +12,7 @@ cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/afni_rx
 3dMEMA -prefix BetweenGroupCond_MEMA_afnifx                 \
 -cio -max_zeros 2 -missing_data 0                 \
 -model_outliers -jobs 20 -verb 1                \
--set Overweight                                        \
+-set HealthyGtUnhealthy                                        \
 sub-CHIVES1003	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1003/CHIVES1003_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1003/CHIVES1003_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
 sub-CHIVES1008	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1008/CHIVES1008_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1008/CHIVES1008_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
 sub-CHIVES1009	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1009/CHIVES1009_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1009/CHIVES1009_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
@@ -50,7 +50,6 @@ sub-CHIVES1095	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money
 sub-CHIVES1096	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1096/CHIVES1096_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1096/CHIVES1096_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
 sub-CHIVES1098	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1098/CHIVES1098_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1098/CHIVES1098_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
 sub-CHIVES1100	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1100/CHIVES1100_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1100/CHIVES1100_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
--set Obese      \
 sub-CHIVES1001	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1001/CHIVES1001_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1001/CHIVES1001_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
 sub-CHIVES1004	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1004/CHIVES1004_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1004/CHIVES1004_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
 sub-CHIVES1005	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1005/CHIVES1005_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1005/CHIVES1005_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
