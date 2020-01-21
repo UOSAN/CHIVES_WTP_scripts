@@ -108,4 +108,4 @@ sub-CHIVES1105	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money
 -mask /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/code/MNI152_T1_2mm_brain_mask.nii  \
 -covariates /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/fMRI/rx/money/covariates.txt \
 -Clustsim \
--prefix_clustsim /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/afni_rx/ClustSim/TTestBmiXAllCondPmod_afnifx
+-prefix_clustsim TTestBmiXAllCondPmod_ClustSim_afnifx
