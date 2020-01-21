@@ -10,7 +10,7 @@ module load afni
 cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/afni_rx
 
 3dttest++                \
--prefix /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/afni_rx/TTestBmiXAllCondPmod_afnifx    	\
+-prefix /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/afni_rx/TTestHEIXAllCondPmod_afnifx    	\
 -setA 	PmodAll \
 sub-CHIVES1001	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1001/CHIVES1001_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	\
 sub-CHIVES1003	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1003/CHIVES1003_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	\

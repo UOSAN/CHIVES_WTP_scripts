@@ -106,4 +106,5 @@ sub-CHIVES1097	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money
 sub-CHIVES1102	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1102/CHIVES1102_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1102/CHIVES1102_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Tstat]"	\
 sub-CHIVES1103	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1103/CHIVES1103_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1103/CHIVES1103_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Tstat]"	\
 sub-CHIVES1105	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1105/CHIVES1105_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1105/CHIVES1105_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Tstat]"	\
--mask /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/code/MNI152_T1_2mm_brain_mask.nii
+-mask /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/code/MNI152_T1_2mm_brain_mask.nii \
+-covariates /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/fMRI/rx/money/ObeseOverweightGroup.txt
