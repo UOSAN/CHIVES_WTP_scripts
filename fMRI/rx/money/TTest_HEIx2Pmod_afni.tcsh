@@ -1,5 +1,5 @@
 #!/bin/tcsh
-#SBATCH --time=10:00:00
+#SBATCH --time=24:00:00
 #SBATCH --nodes=1
 #SBATCH --mem=124000
 #SBATCH --partition=ctn
@@ -8,10 +8,13 @@
 module load afni
 # apply any data directories with variables
 cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/afni_rx
-
+echo --------------------------------
+echo "starting at:"
+date
+echo --------------------------------
 3dttest++                \
 -prefix /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/afni_rx/TTestHeiX2CondPmod_afnifx    	\
--setA 	PmodAll \
+-setA 	HvU_Pmods \
 sub-CHIVES1001	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1001/CHIVES1001_2CondPmod_stats_REML+tlrc.HEAD[HealthyGtUnhealthyPmod#0_Coef]"	\
 sub-CHIVES1003	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1003/CHIVES1003_2CondPmod_stats_REML+tlrc.HEAD[HealthyGtUnhealthyPmod#0_Coef]"	\
 sub-CHIVES1004	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1004/CHIVES1004_2CondPmod_stats_REML+tlrc.HEAD[HealthyGtUnhealthyPmod#0_Coef]"	\
@@ -108,3 +111,8 @@ sub-CHIVES1105	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money
 -covariates /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/fMRI/rx/money/HEI.txt \
 -ETAC \
 -prefix_clustsim TTestHeiX2CondPmod_ETAC_afnifx
+#
+echo --------------------------------
+echo "ended at:"
+date
+echo --------------------------------
