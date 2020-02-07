@@ -1,5 +1,5 @@
 #!/bin/tcsh
-#SBATCH --time=10:00:00
+#SBATCH --time=24:00:00
 #SBATCH --nodes=1
 #SBATCH --mem=124000
 #SBATCH --partition=ctn
@@ -8,7 +8,10 @@
 module load afni
 # apply any data directories with variables
 cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/afni_rx
-
+echo --------------------------------
+echo "starting at:"
+date
+echo --------------------------------
 3dttest++                \
 -prefix /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/afni_rx/TTestBmiXAllCondPmod_afnifx    	\
 -setA 	PmodAll \
@@ -107,5 +110,9 @@ sub-CHIVES1103	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money
 sub-CHIVES1105	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1105/CHIVES1105_AllCondPmod_stats_REML+tlrc.HEAD[Pmod#0_Coef]"	\
 -mask /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/code/MNI152_T1_2mm_brain_mask.nii  \
 -covariates /projects/sanlab/shared/CHIVES/CHIVES_WTP_scripts/fMRI/rx/money/covariates.txt \
--Clustsim \
--prefix_clustsim TTestBmiXAllCondPmod_ClustSim_afnifx
+-ETAC \
+-prefix_clustsim TTestBmiXAllCondPmod_ETAC_afnifx
+echo --------------------------------
+echo "ended at:"
+date
+echo --------------------------------
