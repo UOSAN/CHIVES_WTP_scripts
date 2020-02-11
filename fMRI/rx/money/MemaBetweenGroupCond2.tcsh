@@ -11,8 +11,8 @@ module load afni
 cd /projects/sanlab/shared/CHIVES/nonbids_data/fMRI/rx/money/afni_rx
 3dMEMA -prefix BetweenGroupCond_MEMA_afnifx2                 \
 -cio -max_zeros .1 -missing_data 0                 \
--jobs 20 -verb 1                \
--group overweight obese \
+-jobs 20 \
+-groups overweight obese \
 -set overweight1                                        \
 sub-CHIVES1003	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1003/CHIVES1003_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1003/CHIVES1003_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
 sub-CHIVES1008	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1008/CHIVES1008_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Coef]"	"/projects/sanlab/shared/CHIVES/nonbids_data/fMRI/fx/models/money/afni/CHIVES1008/CHIVES1008_2Cond_stats_REML+tlrc.HEAD[HealthyGtUnhealthy#0_Tstat]"	\
